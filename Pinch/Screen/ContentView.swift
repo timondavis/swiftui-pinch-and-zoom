@@ -84,8 +84,8 @@ struct ContentView: View {
                 Group {
                     HStack {
                        // SCALE DOWN
-                       
-                        Button {
+                        
+                        ControlImageView(icon: "minus.magnifyingglass", callback: {
                             withAnimation(.spring()) {
                                 if (imageScale > 1) {
                                     imageScale -= 1
@@ -95,19 +95,16 @@ struct ContentView: View {
                                     }
                                 }
                             }
-                        } label: {
-                            ControlImageView(icon: "minus.magnifyingglass")
-                        }
+                        })
                         
                        // RESET
-                        Button {
-                            resetImageState()
-                        } label: {
-                            ControlImageView(icon: "arrow.up.left.and.down.right.magnifyingglass")
-                        }
+                        ControlImageView(icon: "arrow.up.left.and.down.right.magnifyingglass", callback: {
+                                resetImageState()
+                            }
+                        )
                         
                        // SCALE UP
-                        Button {
+                        ControlImageView(icon: "plus.magnifyingglass", callback: {
                             withAnimation(.spring()) {
                                 if (imageScale < 5) {
                                     imageScale += 1
@@ -117,9 +114,7 @@ struct ContentView: View {
                                     }
                                 }
                             }
-                        } label: {
-                            ControlImageView(icon: "plus.magnifyingglass")
-                        }
+                        })
                     } //: CONTROLS
                     .padding(EdgeInsets(top: 12, leading: 20, bottom: 12, trailing: 20))
                     .background(.ultraThinMaterial)

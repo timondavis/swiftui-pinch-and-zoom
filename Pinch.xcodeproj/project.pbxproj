@@ -13,6 +13,8 @@
 		114BBC9C295D68760082527A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 114BBC9B295D68760082527A /* Preview Assets.xcassets */; };
 		114BBCA9295D771D0082527A /* InfoPanelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114BBCA8295D771D0082527A /* InfoPanelView.swift */; };
 		114BBCAB295D81040082527A /* ControlImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114BBCAA295D81040082527A /* ControlImageView.swift */; };
+		1188606A29637CF1009F0584 /* Page.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1188606929637CF1009F0584 /* Page.swift */; };
+		1188606C29637D4F009F0584 /* PageData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1188606B29637D4F009F0584 /* PageData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +25,8 @@
 		114BBC9B295D68760082527A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		114BBCA8295D771D0082527A /* InfoPanelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoPanelView.swift; sourceTree = "<group>"; };
 		114BBCAA295D81040082527A /* ControlImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlImageView.swift; sourceTree = "<group>"; };
+		1188606929637CF1009F0584 /* Page.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Page.swift; sourceTree = "<group>"; };
+		1188606B29637D4F009F0584 /* PageData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +98,7 @@
 		114BBCA4295D6A140082527A /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				1188606929637CF1009F0584 /* Page.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -101,6 +106,7 @@
 		114BBCA5295D6A1F0082527A /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				1188606B29637D4F009F0584 /* PageData.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -179,6 +185,8 @@
 				114BBC97295D68750082527A /* ContentView.swift in Sources */,
 				114BBC95295D68750082527A /* PinchApp.swift in Sources */,
 				114BBCA9295D771D0082527A /* InfoPanelView.swift in Sources */,
+				1188606C29637D4F009F0584 /* PageData.swift in Sources */,
+				1188606A29637CF1009F0584 /* Page.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

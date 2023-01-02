@@ -64,6 +64,29 @@ struct ContentView: View {
                                     }
                                 }
                         )
+                    // MARK: 3. MAGNIFICATION GESTURE
+                        .gesture(
+                            MagnificationGesture()
+                                .onChanged { value in
+                                    withAnimation(.linear(duration: 1)) {
+                                        if (imageScale >= 1 && imageScale <= 5) {
+                                            imageScale = value;
+                                        } else if (imageScale >= 5) {
+                                            imageScale = 5;
+                                        }
+                                    }
+                                }
+                                .onEnded { _ in
+                                    if ( imageScale > 5 ) {
+                                        withAnimation(.spring()) {
+                                            imageScale = 5;
+                                        }
+                                    }
+                                    else if (imageScale <= 1) {
+                                        resetImageState();
+                                    }
+                                }
+                        )
                 } //: ZSTACK
                 .navigationTitle("Pinch & Zoom")
                 .navigationBarTitleDisplayMode(.inline)
@@ -72,14 +95,14 @@ struct ContentView: View {
                 })
             } //: VSTACK
             .frame(maxHeight: .infinity)
-            //: MARK - INFO PANEL
+            // MARK: - INFO PANEL
             .overlay(
                 InfoPanelView(scale: imageScale, offset: imageOffset)
                     .padding(.horizontal)
                     .padding(.top, 30)
                 , alignment: .top
             )
-            //: MARK - CONTROLS
+            // MARK: - CONTROLS
             .overlay(
                 Group {
                     HStack {
